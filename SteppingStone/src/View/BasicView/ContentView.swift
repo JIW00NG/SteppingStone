@@ -12,40 +12,40 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Goala.mainGoal, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var goals: FetchedResults<Goala>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(goals) { goal in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text("Goal is \(goal.mainGoal!)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                            Text(goal.mainGoal!)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteGoals)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: addGoal) {
+                        Label("Add Goal", systemImage: "plus")
                     }
                 }
             }
-            Text("Select an item")
+            Text("Select an goal")
         }
     }
 
-    private func addItem() {
+    private func addGoal() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newGoal = Goala(context: viewContext)
+            newGoal.mainGoal = "집에가기"
 
             do {
                 try viewContext.save()
@@ -58,9 +58,9 @@ struct ContentView: View {
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteGoals(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { goals[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -71,18 +71,5 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }
-}
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct SteppingStoneApp: App {
-    let persistenceController = PersistenceController.shared
+    let goalPersistenceController = GoalPersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView()
+                .environment(\.managedObjectContext, goalPersistenceController.container.viewContext)
         }
     }
 }
