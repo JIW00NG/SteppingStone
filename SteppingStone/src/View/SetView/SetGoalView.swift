@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SetGoalView: View {
-    @Binding var newGoal: String
+    @State var newGoal: String = ""
     @Binding var isModalShown: Bool
     @ObservedObject var goals: Goals
     

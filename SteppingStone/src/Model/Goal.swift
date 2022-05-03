@@ -42,6 +42,10 @@ class Goal:ObservableObject {
         return mainGoal
     }
     
+    func setMainGoal(newGoal: String) {
+        self.mainGoal = newGoal
+    }
+    
     func getSubGoals() -> [SubGoal] {
         return subGoals
     }

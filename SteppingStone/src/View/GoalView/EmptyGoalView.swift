@@ -10,22 +10,22 @@ import SwiftUI
 
 struct EmptyGoalView: View {
     @State var isModalShown = false
-    @State var newGoal: String = ""
     @ObservedObject var goals: Goals
+    @State var index: Int
     @Binding var currentTab: Int
     
     var body: some View {
         Button(action: {
-            self.isModalShown = true
+            isModalShown = true
         }) {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(Color("StrokeColor"), lineWidth: 3)
                 Image(systemName: "plus.circle").foregroundColor(Color("LightPastelBlue")).font(.title)
             }
-        }.sheet(isPresented: self.$isModalShown) {
+        }.sheet(isPresented: $isModalShown) {
             NavigationView {
-                SetGoalView(newGoal: $newGoal, isModalShown: $isModalShown, goals: goals)
+                SetGoalView(isModalShown: $isModalShown, goals: goals)
             }
         }
         .padding(.leading)

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GoalView: View {
     @ObservedObject var goal: Goal
+    @State var isModalShown: Bool = false
     
     var body: some View {
         VStack {
@@ -24,12 +25,13 @@ struct GoalView: View {
                                 Spacer()
                                 Menu {
                                     Button(action: {
-                                        
+                                        isModalShown = true
                                     }) {
                                         Label("Edit", systemImage: "pencil")
                                     }
+                                    
                                     Button(action: {
-                                        // todo: add main goal delete action
+                                        
                                     }) {
                                         Label("Delete", systemImage: "trash")
                                     }
@@ -58,5 +60,10 @@ struct GoalView: View {
         }
         .padding(.leading)
         .padding(.trailing)
+        .sheet(isPresented: $isModalShown) {
+            NavigationView {
+                EditGoalView(goal: goal, isModalShown: $isModalShown, editGoal: goal.getMainGoal())
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ struct MainView: View {
                 ForEach(0..<goals.goals.count, id: \.self) { index in
                     GoalView(goal: goals.goals[index]).tag(index)
                 }
-                EmptyGoalView(goals: goals, currentTab: $currentTab).tag(goals.goals.count)
+                EmptyGoalView(goals: goals, index: 0, currentTab: $currentTab).tag(goals.goals.count)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
