@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */; };
 		CE63864D281A257200B5188F /* SteppingStoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63864C281A257200B5188F /* SteppingStoneApp.swift */; };
 		CE63864F281A257200B5188F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63864E281A257200B5188F /* ContentView.swift */; };
 		CE638651281A257200B5188F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE638650281A257200B5188F /* Assets.xcassets */; };
@@ -16,9 +17,15 @@
 		CE638661281A288800B5188F /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638660281A288800B5188F /* GoalView.swift */; };
 		CE638663281A289400B5188F /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638662281A289400B5188F /* SetGoalView.swift */; };
 		CE638669281A2BBA00B5188F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638668281A2BBA00B5188F /* MainView.swift */; };
+		CE9603EA281FD0E8004E22EE /* SubGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9603E9281FD0E8004E22EE /* SubGoal.swift */; };
+		CE99AA6D281BD71A00D53412 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6C281BD71A00D53412 /* Goal.swift */; };
+		CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */; };
+		CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA74281BE59200D53412 /* SubGoalItem.swift */; };
+		CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA77281BE5FD00D53412 /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSubGoalItem.swift; sourceTree = "<group>"; };
 		CE638649281A257200B5188F /* SteppingStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteppingStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE63864C281A257200B5188F /* SteppingStoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneApp.swift; sourceTree = "<group>"; };
 		CE63864E281A257200B5188F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +36,11 @@
 		CE638660281A288800B5188F /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		CE638662281A289400B5188F /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
 		CE638668281A2BBA00B5188F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE9603E9281FD0E8004E22EE /* SubGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoal.swift; sourceTree = "<group>"; };
+		CE99AA6C281BD71A00D53412 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyGoalView.swift; sourceTree = "<group>"; };
+		CE99AA74281BE59200D53412 /* SubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalItem.swift; sourceTree = "<group>"; };
+		CE99AA77281BE5FD00D53412 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +73,12 @@
 		CE63864B281A257200B5188F /* SteppingStone */ = {
 			isa = PBXGroup;
 			children = (
-				CE638655281A257200B5188F /* Persistence.swift */,
-				CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */,
 				CE638652281A257200B5188F /* Preview Content */,
 				CE638667281A2A3100B5188F /* resource */,
 				CE638666281A2A1F00B5188F /* src */,
+				CE63864C281A257200B5188F /* SteppingStoneApp.swift */,
+				CE638655281A257200B5188F /* Persistence.swift */,
+				CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */,
 			);
 			path = SteppingStone;
 			sourceTree = "<group>";
@@ -81,9 +94,9 @@
 		CE63865F281A27EF00B5188F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE638668281A2BBA00B5188F /* MainView.swift */,
-				CE638660281A288800B5188F /* GoalView.swift */,
-				CE638662281A289400B5188F /* SetGoalView.swift */,
+				CEB4121E281BECAB005C6558 /* BasicView */,
+				CE99AA71281BE55100D53412 /* SetView */,
+				CE99AA70281BE53C00D53412 /* GoalView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,9 +104,9 @@
 		CE638666281A2A1F00B5188F /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CE99AA6B281BD70A00D53412 /* Model */,
 				CE63865F281A27EF00B5188F /* View */,
-				CE63864C281A257200B5188F /* SteppingStoneApp.swift */,
-				CE63864E281A257200B5188F /* ContentView.swift */,
+				CE99AA76281BE5D400D53412 /* ViewModel */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -104,6 +117,51 @@
 				CE638650281A257200B5188F /* Assets.xcassets */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		CE99AA6B281BD70A00D53412 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE99AA6C281BD71A00D53412 /* Goal.swift */,
+				CE9603E9281FD0E8004E22EE /* SubGoal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE99AA70281BE53C00D53412 /* GoalView */ = {
+			isa = PBXGroup;
+			children = (
+				CE638660281A288800B5188F /* GoalView.swift */,
+				CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */,
+				CE99AA74281BE59200D53412 /* SubGoalItem.swift */,
+			);
+			path = GoalView;
+			sourceTree = "<group>";
+		};
+		CE99AA71281BE55100D53412 /* SetView */ = {
+			isa = PBXGroup;
+			children = (
+				CE638662281A289400B5188F /* SetGoalView.swift */,
+				CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */,
+			);
+			path = SetView;
+			sourceTree = "<group>";
+		};
+		CE99AA76281BE5D400D53412 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE99AA77281BE5FD00D53412 /* CircularProgress.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEB4121E281BECAB005C6558 /* BasicView */ = {
+			isa = PBXGroup;
+			children = (
+				CE638668281A2BBA00B5188F /* MainView.swift */,
+				CE63864E281A257200B5188F /* ContentView.swift */,
+			);
+			path = BasicView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,13 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE99AA6D281BD71A00D53412 /* Goal.swift in Sources */,
+				CE9603EA281FD0E8004E22EE /* SubGoal.swift in Sources */,
+				CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */,
 				CE638656281A257200B5188F /* Persistence.swift in Sources */,
 				CE638669281A2BBA00B5188F /* MainView.swift in Sources */,
+				CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */,
 				CE638659281A257200B5188F /* SteppingStone.xcdatamodeld in Sources */,
 				CE638661281A288800B5188F /* GoalView.swift in Sources */,
+				CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */,
 				CE63864F281A257200B5188F /* ContentView.swift in Sources */,
 				CE638663281A289400B5188F /* SetGoalView.swift in Sources */,
 				CE63864D281A257200B5188F /* SteppingStoneApp.swift in Sources */,
+				CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
