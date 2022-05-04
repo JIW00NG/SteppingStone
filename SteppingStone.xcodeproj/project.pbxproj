@@ -22,8 +22,6 @@
 		CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */; };
 		CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA74281BE59200D53412 /* SubGoalItem.swift */; };
 		CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA77281BE5FD00D53412 /* CircularProgress.swift */; };
-		CEA690032821123E0004A47E /* GoalPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA690022821123E0004A47E /* GoalPersistence.swift */; };
-		CEA69005282112460004A47E /* SubGoalPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA69004282112460004A47E /* SubGoalPersistence.swift */; };
 		CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +42,6 @@
 		CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyGoalView.swift; sourceTree = "<group>"; };
 		CE99AA74281BE59200D53412 /* SubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalItem.swift; sourceTree = "<group>"; };
 		CE99AA77281BE5FD00D53412 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
-		CEA690022821123E0004A47E /* GoalPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPersistence.swift; sourceTree = "<group>"; };
-		CEA69004282112460004A47E /* SubGoalPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalPersistence.swift; sourceTree = "<group>"; };
 		CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +79,7 @@
 				CE638667281A2A3100B5188F /* resource */,
 				CE638666281A2A1F00B5188F /* src */,
 				CE63864C281A257200B5188F /* SteppingStoneApp.swift */,
+				CE638655281A257200B5188F /* Persistence.swift */,
 				CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */,
 			);
 			path = SteppingStone;
@@ -136,7 +133,6 @@
 		CE99AA70281BE53C00D53412 /* GoalView */ = {
 			isa = PBXGroup;
 			children = (
-				CE99AA77281BE5FD00D53412 /* CircularProgress.swift */,
 				CE638660281A288800B5188F /* GoalView.swift */,
 				CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */,
 				CE99AA74281BE59200D53412 /* SubGoalItem.swift */,
@@ -157,9 +153,7 @@
 		CE99AA76281BE5D400D53412 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CE638655281A257200B5188F /* Persistence.swift */,
-				CEA690022821123E0004A47E /* GoalPersistence.swift */,
-				CEA69004282112460004A47E /* SubGoalPersistence.swift */,
+				CE99AA77281BE5FD00D53412 /* CircularProgress.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,12 +242,10 @@
 				CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */,
 				CE638656281A257200B5188F /* Persistence.swift in Sources */,
 				CE638669281A2BBA00B5188F /* MainView.swift in Sources */,
-				CEA69005282112460004A47E /* SubGoalPersistence.swift in Sources */,
 				CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */,
 				CE638659281A257200B5188F /* SteppingStone.xcdatamodeld in Sources */,
 				CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */,
 				CE638661281A288800B5188F /* GoalView.swift in Sources */,
-				CEA690032821123E0004A47E /* GoalPersistence.swift in Sources */,
 				CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */,
 				CE63864F281A257200B5188F /* ContentView.swift in Sources */,
 				CE638663281A289400B5188F /* SetGoalView.swift in Sources */,

@@ -65,13 +65,6 @@ struct SubGoalItem: View {
         
         .contextMenu {
             Button(action: {
-                // todo add edit sub goal action
-            }, label: {
-                Text("Edit")
-                Spacer()
-                Image(systemName: "pencil")
-            })
-            Button(action: {
                 goal.removeSubGoal(index: goalIndex)
             }, label: {
                 Text("Delete")
