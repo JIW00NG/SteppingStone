@@ -20,8 +20,8 @@ struct MainView: View {
                 .padding(.leading)
                 .padding(.trailing)
             TabView(selection: $currentTab) {
-                ForEach(0..<goals.getGoals().count, id: \.self) { index in
-                    GoalView(goals: goals, index: index).tag(index)
+                ForEach(goals.getGoals(), id: \.id) { goal in
+                    GoalView(goal: goal)
                 }
                 EmptyGoalView(goals: goals).tag(goals.getGoals().count)
             }

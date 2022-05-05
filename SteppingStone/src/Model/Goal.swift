@@ -44,7 +44,7 @@ class Goals: ObservableObject {
 
 class Goal:ObservableObject {
     @Published private var mainGoal: String
-    @Published private var id: Int
+    @Published var id: Int
     @Published private var subGoals: [SubGoal]
     
     init(id: Int, mainGoal: String, subGoals: [SubGoal]) {
@@ -89,6 +89,11 @@ class Goal:ObservableObject {
             }
             return avg / Double(subGoals.count) * 100
         }
+    }
+    
+    func removeGoal() {
+        DBHelper.shared.deleteGoal(id: id)
+        goals.remove(at: index)
     }
     
     func removeSubGoal(id: Int, subGoalIndex: Int) {

@@ -40,16 +40,16 @@ struct SubGoalItem: View {
                     Rectangle().fill(.white.opacity(0.8))
                     
                     // TODO refactoring
-                    //                    if subGoal > goalIndex {
-                    VStack {
-                        Rectangle().fill(goalColors[goalIndex % 3]).frame(width: (Double(goal.getSubGoal(id: subGoalIndex).getDegree()) / Double(goal.getSubGoal(id: subGoalIndex).getMaxDegree())) * goalsViewWidth)
+                    if goal.getSubGoals().count > goalIndex {
+                        VStack {
+                            Rectangle().fill(goalColors[goalIndex % 3]).frame(width: (Double(goal.getSubGoal(id: subGoalIndex).getDegree()) / Double(goal.getSubGoal(id: subGoalIndex).getMaxDegree())) * goalsViewWidth)
+                        }
+                        .animation(.default, value: goal.getSubGoal(id: subGoalIndex).getDegree())
+                        VStack(alignment: .leading) {
+                            Text("\(goal.getSubGoal(id: subGoalIndex).getSubGoal())").font(.subheadline)
+                            Text("\(goal.getSubGoal(id: subGoalIndex).getDegree())/\(goal.getSubGoal(id: subGoalIndex).getMaxDegree())").font(.caption).foregroundColor(Color("LightGray"))
+                        }.padding()
                     }
-                    .animation(.default, value: goal.getSubGoal(id: subGoalIndex).getDegree())
-                    VStack(alignment: .leading) {
-                        Text("\(goal.getSubGoal(id: subGoalIndex).getSubGoal())").font(.subheadline)
-                        Text("\(goal.getSubGoal(id: subGoalIndex).getDegree())/\(goal.getSubGoal(id: subGoalIndex).getMaxDegree())").font(.caption).foregroundColor(Color("LightGray"))
-                    }.padding()
-                    //                    }
                 }
                 
                 Button(action: {

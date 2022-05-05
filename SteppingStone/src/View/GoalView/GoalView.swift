@@ -9,9 +9,8 @@ import Foundation
 import SwiftUI
 
 struct GoalView: View {
-    @State var dbHelper = DBHelper.shared
     @State var isModalShown: Bool = false
-    @ObservedObject var goals: Goals
+    @ObservedObject var goal: Goal
     @State var index: Int
     
     var body: some View {
@@ -22,7 +21,7 @@ struct GoalView: View {
                 VStack {
                     VStack {
                         ZStack {
-                            Text(goals.getGoal(index: index).getMainGoal()).font(.headline).bold()
+                            Text(goal.getMainGoal()).font(.headline).bold()
                             HStack {
                                 Spacer()
                                 Menu {
@@ -34,7 +33,7 @@ struct GoalView: View {
                                     
                                     Button(action: {
                                         goals.removeGoal(index: index)
-                                        goals.objectWillChange.send()
+                                        goal.objectWillChange.send()
                                     }) {
                                         Label("Delete", systemImage: "trash")
                                     }
@@ -44,7 +43,7 @@ struct GoalView: View {
                             }
                         }
                         
-                        circlurProgress(goal: goals.getGoal(index: index))
+                        circlurProgress(goal: goal)
                     }
                     
                     Divider()
@@ -52,8 +51,8 @@ struct GoalView: View {
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
                     ScrollView {
                         LazyVStack {
-                            ForEach(0..<goals.getGoal(index: index).getSubGoals().count, id: \.self) { index in
-                                SubGoalItem(goal: goals.getGoal(index: self.index), goalIndex: index, subGoalIndex: index)
+                            ForEach(0..<goal.getSubGoals().count, id: \.self) { index in
+                                SubGoalItem(goal: goal, goalIndex: index, subGoalIndex: index)
                             }
                             AddSubGoalButton(goals: goals, index: index)
                         }
@@ -65,10 +64,9 @@ struct GoalView: View {
         .padding(.trailing)
         .sheet(isPresented: $isModalShown) {
             NavigationView {
-                EditGoalView(goals: goals,
-                             goalIndex: index,
+                EditGoalView(goalIndex: index,
                              isModalShown: $isModalShown,
-                             editGoal: goals.getGoal(index: index).getMainGoal())
+                             editGoal: goal.getMainGoal())
             }
         }
     }

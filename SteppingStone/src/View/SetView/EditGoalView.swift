@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditGoalView: View {
-    @ObservedObject var goals: Goals
+    @ObservedObject var goal: Goal
     @State var goalIndex: Int
     @Binding var isModalShown: Bool
     @State var editGoal: String
