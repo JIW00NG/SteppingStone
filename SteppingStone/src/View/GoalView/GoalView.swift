@@ -15,60 +15,62 @@ struct GoalView: View {
     @State var index: Int
     
     var body: some View {
-        VStack {
-            ZStack (alignment: .top){
-                RoundedRectangle(cornerRadius: 20)
-                    .strokeBorder(Color("StrokeColor"), lineWidth: 3)
-                VStack {
+        if goals.getGoals().count > index {
+            VStack {
+                ZStack (alignment: .top){
+                    RoundedRectangle(cornerRadius: 20)
+                        .strokeBorder(Color("StrokeColor"), lineWidth: 3)
                     VStack {
-                        ZStack {
-                            Text(goals.getGoal(index: index).getMainGoal()).font(.headline).bold()
-                            HStack {
-                                Spacer()
-                                Menu {
-                                    Button(action: {
-                                        isModalShown = true
-                                    }) {
-                                        Label("Edit", systemImage: "pencil")
+                        VStack {
+                            ZStack {
+                                Text(goals.getGoal(index: index).getMainGoal()).font(.headline).bold()
+                                HStack {
+                                    Spacer()
+                                    Menu {
+                                        Button(action: {
+                                            isModalShown = true
+                                        }) {
+                                            Label("Edit", systemImage: "pencil")
+                                        }
+                                        
+                                        Button(action: {
+                                            goals.removeGoal(index: index)
+                                            goals.objectWillChange.send()
+                                        }) {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+                                    } label: {
+                                        Image(systemName: "ellipsis.circle")
                                     }
-                                    
-                                    Button(action: {
-                                        goals.removeGoal(index: index)
-                                        goals.objectWillChange.send()
-                                    }) {
-                                        Label("Delete", systemImage: "trash")
-                                    }
-                                } label: {
-                                    Image(systemName: "ellipsis.circle")
                                 }
                             }
+                            
+                            circlurProgress(goal: goals.getGoal(index: index))
                         }
                         
-                        circlurProgress(goal: goals.getGoal(index: index))
-                    }
-                    
-                    Divider()
-                        .background(Color("StrokeColor"))
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(0..<goals.getGoal(index: index).getSubGoals().count, id: \.self) { index in
-                                SubGoalItem(goal: goals.getGoal(index: self.index), goalIndex: index, subGoalIndex: index)
+                        Divider()
+                            .background(Color("StrokeColor"))
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(0..<goals.getGoal(index: index).getSubGoals().count, id: \.self) { index in
+                                    SubGoalItem(goal: goals.getGoal(index: self.index), subGoalIndex: index)
+                                }
+                                AddSubGoalButton(goals: goals, index: index)
                             }
-                            AddSubGoalButton(goals: goals, index: index)
                         }
-                    }
-                }.padding()
+                    }.padding()
+                }
             }
-        }
-        .padding(.leading)
-        .padding(.trailing)
-        .sheet(isPresented: $isModalShown) {
-            NavigationView {
-                EditGoalView(goals: goals,
-                             goalIndex: index,
-                             isModalShown: $isModalShown,
-                             editGoal: goals.getGoal(index: index).getMainGoal())
+            .padding(.leading)
+            .padding(.trailing)
+            .sheet(isPresented: $isModalShown) {
+                NavigationView {
+                    EditGoalView(goals: goals,
+                                 goalIndex: index,
+                                 isModalShown: $isModalShown,
+                                 editGoal: goals.getGoal(index: index).getMainGoal())
+                }
             }
         }
     }
