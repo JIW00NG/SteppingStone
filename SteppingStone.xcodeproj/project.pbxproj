@@ -22,6 +22,7 @@
 		CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */; };
 		CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA74281BE59200D53412 /* SubGoalItem.swift */; };
 		CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA77281BE5FD00D53412 /* CircularProgress.swift */; };
+		CEA1664028220A520022954C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1663F28220A520022954C /* DBHelper.swift */; };
 		CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyGoalView.swift; sourceTree = "<group>"; };
 		CE99AA74281BE59200D53412 /* SubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalItem.swift; sourceTree = "<group>"; };
 		CE99AA77281BE5FD00D53412 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		CEA1663F28220A520022954C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				CE99AA6C281BD71A00D53412 /* Goal.swift */,
 				CE9603E9281FD0E8004E22EE /* SubGoal.swift */,
+				CEA1663F28220A520022954C /* DBHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				CE638669281A2BBA00B5188F /* MainView.swift in Sources */,
 				CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */,
 				CE638659281A257200B5188F /* SteppingStone.xcdatamodeld in Sources */,
+				CEA1664028220A520022954C /* DBHelper.swift in Sources */,
 				CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */,
 				CE638661281A288800B5188F /* GoalView.swift in Sources */,
 				CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */,

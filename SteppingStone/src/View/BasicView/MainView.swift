@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var goals: Goals = Goals()
+    @State var dbHelper = DBHelper.shared
     @State var currentTab: Int = 0
+    @ObservedObject var goals: Goals = Goals(goals: DBHelper.shared.readGoalDataAll())
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -19,10 +20,10 @@ struct MainView: View {
                 .padding(.leading)
                 .padding(.trailing)
             TabView(selection: $currentTab) {
-                ForEach(0..<goals.goals.count, id: \.self) { index in
-                    GoalView(goal: goals.goals[index]).tag(index)
+                ForEach(0..<goals.getGoals().count, id: \.self) { index in
+                    GoalView(goals: goals, index: index).tag(index)
                 }
-                EmptyGoalView(goals: goals, index: 0, currentTab: $currentTab).tag(goals.goals.count)
+                EmptyGoalView(goals: goals).tag(goals.getGoals().count)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))

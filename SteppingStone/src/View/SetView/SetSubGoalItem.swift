@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 struct SetSubGoalItem: View {
-    @ObservedObject var goal: Goal
+    @ObservedObject var goals: Goals
     @Binding var isAddMode: Bool
+    @State var index: Int
     
     @State var subGoal: String = ""
     @State var maxDegree: Int = 20
@@ -33,9 +34,10 @@ struct SetSubGoalItem: View {
                     Button(action: {
                         if subGoal != "" {
                             isAddMode.toggle()
-                            goal.addSubGoal(subGoal: subGoal, maxDegree: maxDegree)
+                            goals.getGoal(index: index).addSubGoal(mainGoalId: goals.getGoal(index: index).getId(), subGoal: subGoal, maxDegree: maxDegree)
                             subGoal = ""
                             maxDegree = 20
+                            goals.objectWillChange.send()
                         } else {
                             // TODO sub goal이 정해지지 않았다는 알림창 띄우기
                         }
@@ -61,13 +63,14 @@ struct SetSubGoalItem: View {
 }
 
 struct AddSubGoalButton: View {
-    @ObservedObject var goal: Goal
+    @ObservedObject var goals: Goals
     @State var isAddMode: Bool = false
+    @State var index: Int
     
     var body: some View {
         
         if isAddMode {
-            SetSubGoalItem(goal: goal, isAddMode: $isAddMode)
+            SetSubGoalItem(goals: goals, isAddMode: $isAddMode, index: index)
                 .frame(height: 96)
         }
         

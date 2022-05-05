@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditGoalView: View {
-    @ObservedObject var goal: Goal
+    @ObservedObject var goals: Goals
+    @State var goalIndex: Int
     @Binding var isModalShown: Bool
     @State var editGoal: String
     
@@ -20,8 +21,9 @@ struct EditGoalView: View {
                     .navigationBarTitle("Edit Your Goal", displayMode: .inline)
                     .navigationBarItems(trailing: Button("Done", action: {
                         if editGoal != "" {
-                            goal.setMainGoal(newGoal: editGoal)
+                            goals.getGoal(index: goalIndex).setMainGoal(newGoal: editGoal)
                             editGoal = ""
+                            goals.objectWillChange.send()
                         }
                         self.isModalShown = false
                     }))

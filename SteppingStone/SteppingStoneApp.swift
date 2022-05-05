@@ -10,6 +10,11 @@ import SwiftUI
 @main
 struct SteppingStoneApp: App {
     let persistenceController = PersistenceController.shared
+    
+    init() {
+        DBHelper.shared.createGoalTable()
+        DBHelper.shared.createSubGoalTable()
+    }
 
     var body: some Scene {
         WindowGroup {

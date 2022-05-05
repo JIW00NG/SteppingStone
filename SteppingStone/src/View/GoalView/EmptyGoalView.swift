@@ -11,8 +11,6 @@ import SwiftUI
 struct EmptyGoalView: View {
     @State var isModalShown = false
     @ObservedObject var goals: Goals
-    @State var index: Int
-    @Binding var currentTab: Int
     
     var body: some View {
         Button(action: {
