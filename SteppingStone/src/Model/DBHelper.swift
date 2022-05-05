@@ -310,9 +310,9 @@ class DBHelper: ObservableObject {
         print("Update has been successfully done")
     }
     
-    func updateSubGoal(id: Int, subGoal: String, maxDegree: Int) {
+    func updateSubGoal(id: Int, subGoal: String, degree: Int, maxDegree: Int) {
         var statement: OpaquePointer?
-        let queryString = "UPDATE sub_goal SET sub_goal = '\(subGoal)', maxDegree = \(maxDegree) WHERE id == \(id)"
+        let queryString = "UPDATE sub_goal SET sub_goal = '\(subGoal)', max_degree = \(maxDegree), degree = \(degree) WHERE id == \(id)"
         
         if sqlite3_prepare(db, queryString, -1, &statement, nil) != SQLITE_OK {
             let errorMessage = String(cString: sqlite3_errmsg(db))

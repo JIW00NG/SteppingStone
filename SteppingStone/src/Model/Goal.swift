@@ -79,6 +79,16 @@ class Goal:ObservableObject {
         subGoals.append(SubGoal(id: DBHelper.shared.getSubGoalId(subGoal: subGoal), mainGoalId: mainGoalId, subGoal: subGoal, maxDegree: maxDegree))
     }
     
+    func editSubGoal(index: Int, subGoal: String, maxDegree: Int) {
+        let newDegree: Int = Int(Double(subGoals[index].getDegree()) / Double(subGoals[index].getMaxDegree()) * Double(maxDegree))
+        
+        subGoals[index].setSubGoal(newSubGoal: subGoal)
+        subGoals[index].setDegree(newDegree: newDegree)
+        subGoals[index].setMaxDegree(newMaxDegree: maxDegree)
+        
+        DBHelper.shared.updateSubGoal(id: subGoals[index].getId(), subGoal: subGoal, degree: newDegree, maxDegree: maxDegree)
+    }
+    
     func getAvg() -> Double {
         var avg: Double = 0
         if subGoals.count == 0 {

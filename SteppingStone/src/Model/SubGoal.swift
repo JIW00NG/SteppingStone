@@ -42,16 +42,16 @@ class SubGoal: ObservableObject {
         return Int(DBHelper.shared.readSubGoalData(id: id, key: "max_degree"))!
     }
     
-    func setSubGoal() -> String {
-        return subGoal
+    func setSubGoal(newSubGoal: String) {
+        subGoal = newSubGoal
     }
     
-    func setDegree() -> Int {
-        return degree
+    func setDegree(newDegree: Int) {
+        degree = newDegree
     }
     
-    func setMaxDegree() -> Int {
-        return maxDegree
+    func setMaxDegree(newMaxDegree: Int) {
+        maxDegree = newMaxDegree
     }
     
     func increaseDegree() {
