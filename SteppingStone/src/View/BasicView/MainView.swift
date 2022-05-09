@@ -25,7 +25,7 @@ struct MainView: View {
                 }
                 EmptyGoalView(goals: goals).tag(goals.getGoals().count)
             }
-            .tabViewStyle(.page(indexDisplayMode: .always))
+            .tabViewStyle(.page(indexDisplayMode: .automatic))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
         }
     }
