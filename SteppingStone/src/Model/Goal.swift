@@ -8,56 +8,87 @@
 import Foundation
 import SwiftUI
 
-class Goals:ObservableObject {
-    @Published public var goals: [Goal]
-    
-    init() {
-        self.goals = []
-    }
+class Goals: ObservableObject {
+    @Published private var goals: [Goal]
     
     init(goals: [Goal]) {
         self.goals = goals
+    }
+    
+    func addGoal(newGoal: String) {
+        DBHelper.shared.insertGoal(mainGoal: newGoal)
+        goals.append(Goal(id: DBHelper.shared.getGoalId(mainGoal: newGoal), mainGoal: newGoal, subGoals: []))
+    }
+    
+    func getGoal(index: Int) -> Goal {
+        return goals[index]
+    }
+    
+    func getGoals() -> [Goal] {
+        return goals
+    }
+    
+    func getIds() -> [Int] {
+        var ids: [Int] = []
+        for i in 0..<goals.count {
+            ids.append(goals[i].getId())
+        }
+        return ids
+    }
+    
+    func removeGoal(index: Int) {
+        DBHelper.shared.deleteGoal(id: goals[index].getId())
+        goals.remove(at: index)
     }
 }
 
 class Goal:ObservableObject {
     @Published private var mainGoal: String
+    @Published private var id: Int
     @Published private var subGoals: [SubGoal]
     
-    init(mainGoal: String) {
+    init(id: Int, mainGoal: String, subGoals: [SubGoal]) {
+        self.id = id
         self.mainGoal = mainGoal
-        self.subGoals = []
+        self.subGoals = subGoals
     }
     
-    init(mainGoal: String, subGoal: [SubGoal]) {
-        self.mainGoal = mainGoal
-        self.subGoals = subGoal
+    func getId() -> Int {
+        return id
     }
-
-    func addSubGoal(subGoal: String, maxDegree: Int) {
-        subGoals.append(SubGoal(subGoal: subGoal, maxDegree: maxDegree))
-    }
-
+    
     func getMainGoal() -> String {
         return mainGoal
-    }
-    
-    func setMainGoal(newGoal: String) {
-        self.mainGoal = newGoal
     }
     
     func getSubGoals() -> [SubGoal] {
         return subGoals
     }
     
-    func getSubGoalDegree(index: Int) -> Int {
-        return subGoals[index].getDegree()
+    func getSubGoal(id: Int) -> SubGoal {
+        return subGoals[id]
     }
     
-    func getSubGoalMaxDegree(index: Int) -> Int {
-        return subGoals[index].getMaxDegree()
+    func setMainGoal(newGoal: String) {
+        self.mainGoal = newGoal
+        DBHelper.shared.updateGoal(id: id, mainGoal: newGoal)
     }
-
+    
+    func addSubGoal(mainGoalId: Int, subGoal: String, maxDegree: Int) {
+        DBHelper.shared.insertSubGoal(mainGoalId: mainGoalId, subGoal: subGoal, maxDegree: maxDegree)
+        subGoals.append(SubGoal(id: DBHelper.shared.getSubGoalId(subGoal: subGoal), mainGoalId: mainGoalId, subGoal: subGoal, maxDegree: maxDegree))
+    }
+    
+    func editSubGoal(index: Int, subGoal: String, maxDegree: Int) {
+        let newDegree: Int = Int(Double(subGoals[index].getDegree()) / Double(subGoals[index].getMaxDegree()) * Double(maxDegree))
+        
+        subGoals[index].setSubGoal(newSubGoal: subGoal)
+        subGoals[index].setDegree(newDegree: newDegree)
+        subGoals[index].setMaxDegree(newMaxDegree: maxDegree)
+        
+        DBHelper.shared.updateSubGoal(id: subGoals[index].getId(), subGoal: subGoal, degree: newDegree, maxDegree: maxDegree)
+    }
+    
     func getAvg() -> Double {
         var avg: Double = 0
         if subGoals.count == 0 {
@@ -70,7 +101,8 @@ class Goal:ObservableObject {
         }
     }
     
-    func removeSubGoal(index: Int) {
-        subGoals.remove(at: index)
+    func removeSubGoal(id: Int, subGoalIndex: Int) {
+        subGoals.remove(at: subGoalIndex)
+        DBHelper.shared.deleteSubGoal(id: id)
     }
 }

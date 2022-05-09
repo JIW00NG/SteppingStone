@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct circlurProgress: View {
+    @State var dbHelper = DBHelper.shared
     @ObservedObject var goal: Goal
+    @State var avg: Double = 0.0
     
     var body: some View {
         ZStack {

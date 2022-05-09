@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SetGoalView: View {
+    @State var dbHelper = DBHelper.shared
     @State var newGoal: String = ""
     @Binding var isModalShown: Bool
     @ObservedObject var goals: Goals
@@ -21,9 +22,10 @@ struct SetGoalView: View {
                     .navigationBarTitle("Set Goal", displayMode: .inline)
                     .navigationBarItems(trailing: Button("Done", action: {
                         if newGoal != "" {
-                            goals.goals.append(Goal(mainGoal: newGoal))
+                            goals.addGoal(newGoal: newGoal)
                             self.isModalShown = false
                             newGoal = ""
+                            goals.objectWillChange.send()
                         }else {
                             // TODO
                             // 입력 안하면 못지나감
