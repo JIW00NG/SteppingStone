@@ -3,52 +3,92 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */; };
-		CE63864D281A257200B5188F /* SteppingStoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63864C281A257200B5188F /* SteppingStoneApp.swift */; };
-		CE63864F281A257200B5188F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63864E281A257200B5188F /* ContentView.swift */; };
-		CE638651281A257200B5188F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE638650281A257200B5188F /* Assets.xcassets */; };
-		CE638654281A257200B5188F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE638653281A257200B5188F /* Preview Assets.xcassets */; };
-		CE638656281A257200B5188F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638655281A257200B5188F /* Persistence.swift */; };
-		CE638659281A257200B5188F /* SteppingStone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */; };
-		CE638661281A288800B5188F /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638660281A288800B5188F /* GoalView.swift */; };
-		CE638663281A289400B5188F /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638662281A289400B5188F /* SetGoalView.swift */; };
-		CE638669281A2BBA00B5188F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE638668281A2BBA00B5188F /* MainView.swift */; };
-		CE9603EA281FD0E8004E22EE /* SubGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9603E9281FD0E8004E22EE /* SubGoal.swift */; };
-		CE99AA6D281BD71A00D53412 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6C281BD71A00D53412 /* Goal.swift */; };
-		CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */; };
-		CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA74281BE59200D53412 /* SubGoalItem.swift */; };
-		CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AA77281BE5FD00D53412 /* CircularProgress.swift */; };
-		CEA1664028220A520022954C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1663F28220A520022954C /* DBHelper.swift */; };
-		CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */; };
+		CE02634B29FE8CA900CF1AAA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02634A29FE8CA900CF1AAA /* String+Extension.swift */; };
+		CE02634E29FEA5F600CF1AAA /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02634D29FEA5F600CF1AAA /* GoalManager.swift */; };
+		CE02635029FEA63100CF1AAA /* SubGoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02634F29FEA63100CF1AAA /* SubGoalManager.swift */; };
+		CE7D4C5029FE3B48006FD0D0 /* SteppingStoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C4F29FE3B48006FD0D0 /* SteppingStoneApp.swift */; };
+		CE7D4C5429FE3B4A006FD0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7D4C5329FE3B4A006FD0D0 /* Assets.xcassets */; };
+		CE7D4C5729FE3B4A006FD0D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7D4C5629FE3B4A006FD0D0 /* Preview Assets.xcassets */; };
+		CE7D4C5C29FE3B4A006FD0D0 /* SteppingStone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C5A29FE3B4A006FD0D0 /* SteppingStone.xcdatamodeld */; };
+		CE7D4C6729FE3B4A006FD0D0 /* SteppingStoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C6629FE3B4A006FD0D0 /* SteppingStoneTests.swift */; };
+		CE7D4C7129FE3B4A006FD0D0 /* SteppingStoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C7029FE3B4A006FD0D0 /* SteppingStoneUITests.swift */; };
+		CE7D4C7329FE3B4A006FD0D0 /* SteppingStoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C7229FE3B4A006FD0D0 /* SteppingStoneUITestsLaunchTests.swift */; };
+		CE7D4C8829FE3C66006FD0D0 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C8729FE3C66006FD0D0 /* K.swift */; };
+		CE7D4C8A29FE3C8C006FD0D0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C8929FE3C8C006FD0D0 /* Colors.swift */; };
+		CE7D4C8C29FE3D52006FD0D0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C8B29FE3D52006FD0D0 /* CoreDataManager.swift */; };
+		CE7D4C8E29FE3DE1006FD0D0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C8D29FE3DE1006FD0D0 /* HomeView.swift */; };
+		CE7D4C9229FE3EA1006FD0D0 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9129FE3EA1006FD0D0 /* GoalView.swift */; };
+		CE7D4C9429FE3EAA006FD0D0 /* SubGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9329FE3EAA006FD0D0 /* SubGoalView.swift */; };
+		CE7D4C9929FE42FD006FD0D0 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9829FE42FD006FD0D0 /* GoalViewModel.swift */; };
+		CE7D4C9B29FE4305006FD0D0 /* SubGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9A29FE4305006FD0D0 /* SubGoalViewModel.swift */; };
+		CE7D4C9D29FE4322006FD0D0 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9C29FE4322006FD0D0 /* Goal.swift */; };
+		CE7D4C9F29FE4435006FD0D0 /* SubGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D4C9E29FE4435006FD0D0 /* SubGoal.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CE7D4C6329FE3B4A006FD0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7D4C4429FE3B48006FD0D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7D4C4B29FE3B48006FD0D0;
+			remoteInfo = SteppingStone;
+		};
+		CE7D4C6D29FE3B4A006FD0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7D4C4429FE3B48006FD0D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7D4C4B29FE3B48006FD0D0;
+			remoteInfo = SteppingStone;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSubGoalItem.swift; sourceTree = "<group>"; };
-		CE638649281A257200B5188F /* SteppingStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteppingStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE63864C281A257200B5188F /* SteppingStoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneApp.swift; sourceTree = "<group>"; };
-		CE63864E281A257200B5188F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE638650281A257200B5188F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE638653281A257200B5188F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE638655281A257200B5188F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		CE638658281A257200B5188F /* SteppingStone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SteppingStone.xcdatamodel; sourceTree = "<group>"; };
-		CE638660281A288800B5188F /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
-		CE638662281A289400B5188F /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
-		CE638668281A2BBA00B5188F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CE9603E9281FD0E8004E22EE /* SubGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoal.swift; sourceTree = "<group>"; };
-		CE99AA6C281BD71A00D53412 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
-		CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyGoalView.swift; sourceTree = "<group>"; };
-		CE99AA74281BE59200D53412 /* SubGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalItem.swift; sourceTree = "<group>"; };
-		CE99AA77281BE5FD00D53412 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
-		CEA1663F28220A520022954C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-		CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
+		CE02634A29FE8CA900CF1AAA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CE02634D29FEA5F600CF1AAA /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
+		CE02634F29FEA63100CF1AAA /* SubGoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalManager.swift; sourceTree = "<group>"; };
+		CE7D4C4C29FE3B48006FD0D0 /* SteppingStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteppingStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7D4C4F29FE3B48006FD0D0 /* SteppingStoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneApp.swift; sourceTree = "<group>"; };
+		CE7D4C5329FE3B4A006FD0D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE7D4C5629FE3B4A006FD0D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE7D4C5B29FE3B4A006FD0D0 /* SteppingStone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SteppingStone.xcdatamodel; sourceTree = "<group>"; };
+		CE7D4C5D29FE3B4A006FD0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7D4C6229FE3B4A006FD0D0 /* SteppingStoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteppingStoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7D4C6629FE3B4A006FD0D0 /* SteppingStoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneTests.swift; sourceTree = "<group>"; };
+		CE7D4C6C29FE3B4A006FD0D0 /* SteppingStoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteppingStoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7D4C7029FE3B4A006FD0D0 /* SteppingStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneUITests.swift; sourceTree = "<group>"; };
+		CE7D4C7229FE3B4A006FD0D0 /* SteppingStoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingStoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE7D4C8729FE3C66006FD0D0 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		CE7D4C8929FE3C8C006FD0D0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE7D4C8B29FE3D52006FD0D0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CE7D4C8D29FE3DE1006FD0D0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE7D4C9129FE3EA1006FD0D0 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		CE7D4C9329FE3EAA006FD0D0 /* SubGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalView.swift; sourceTree = "<group>"; };
+		CE7D4C9829FE42FD006FD0D0 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		CE7D4C9A29FE4305006FD0D0 /* SubGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoalViewModel.swift; sourceTree = "<group>"; };
+		CE7D4C9C29FE4322006FD0D0 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		CE7D4C9E29FE4435006FD0D0 /* SubGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGoal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE638646281A257200B5188F /* Frameworks */ = {
+		CE7D4C4929FE3B48006FD0D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C5F29FE3B4A006FD0D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C6929FE3B4A006FD0D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,128 +98,174 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE638640281A257200B5188F = {
+		CE02634929FE8C9E00CF1AAA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE63864B281A257200B5188F /* SteppingStone */,
-				CE63864A281A257200B5188F /* Products */,
+				CE02634A29FE8CA900CF1AAA /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE02634C29FEA58F00CF1AAA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D4C5329FE3B4A006FD0D0 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CE7D4C4329FE3B48006FD0D0 = {
+			isa = PBXGroup;
+			children = (
+				CE7D4C4E29FE3B48006FD0D0 /* SteppingStone */,
+				CE7D4C6529FE3B4A006FD0D0 /* SteppingStoneTests */,
+				CE7D4C6F29FE3B4A006FD0D0 /* SteppingStoneUITests */,
+				CE7D4C4D29FE3B48006FD0D0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE63864A281A257200B5188F /* Products */ = {
+		CE7D4C4D29FE3B48006FD0D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE638649281A257200B5188F /* SteppingStone.app */,
+				CE7D4C4C29FE3B48006FD0D0 /* SteppingStone.app */,
+				CE7D4C6229FE3B4A006FD0D0 /* SteppingStoneTests.xctest */,
+				CE7D4C6C29FE3B4A006FD0D0 /* SteppingStoneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE63864B281A257200B5188F /* SteppingStone */ = {
+		CE7D4C4E29FE3B48006FD0D0 /* SteppingStone */ = {
 			isa = PBXGroup;
 			children = (
-				CE638652281A257200B5188F /* Preview Content */,
-				CE638667281A2A3100B5188F /* resource */,
-				CE638666281A2A1F00B5188F /* src */,
-				CE63864C281A257200B5188F /* SteppingStoneApp.swift */,
-				CE638655281A257200B5188F /* Persistence.swift */,
-				CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */,
+				CE7D4C8029FE3B84006FD0D0 /* Global */,
+				CE7D4C7F29FE3B7D006FD0D0 /* MVVM */,
+				CE7D4C5529FE3B4A006FD0D0 /* Preview Content */,
 			);
 			path = SteppingStone;
 			sourceTree = "<group>";
 		};
-		CE638652281A257200B5188F /* Preview Content */ = {
+		CE7D4C5529FE3B4A006FD0D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CE638653281A257200B5188F /* Preview Assets.xcassets */,
+				CE7D4C5629FE3B4A006FD0D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE63865F281A27EF00B5188F /* View */ = {
+		CE7D4C6529FE3B4A006FD0D0 /* SteppingStoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEB4121E281BECAB005C6558 /* BasicView */,
-				CE99AA71281BE55100D53412 /* SetView */,
-				CE99AA70281BE53C00D53412 /* GoalView */,
+				CE7D4C6629FE3B4A006FD0D0 /* SteppingStoneTests.swift */,
 			);
-			path = View;
+			path = SteppingStoneTests;
 			sourceTree = "<group>";
 		};
-		CE638666281A2A1F00B5188F /* src */ = {
+		CE7D4C6F29FE3B4A006FD0D0 /* SteppingStoneUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CE99AA6B281BD70A00D53412 /* Model */,
-				CE63865F281A27EF00B5188F /* View */,
-				CE99AA76281BE5D400D53412 /* ViewModel */,
+				CE7D4C7029FE3B4A006FD0D0 /* SteppingStoneUITests.swift */,
+				CE7D4C7229FE3B4A006FD0D0 /* SteppingStoneUITestsLaunchTests.swift */,
 			);
-			path = src;
+			path = SteppingStoneUITests;
 			sourceTree = "<group>";
 		};
-		CE638667281A2A3100B5188F /* resource */ = {
+		CE7D4C7F29FE3B7D006FD0D0 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				CE638650281A257200B5188F /* Assets.xcassets */,
+				CE7D4C8629FE3C52006FD0D0 /* Model */,
+				CE7D4C8529FE3C50006FD0D0 /* View */,
+				CE7D4C8429FE3C4B006FD0D0 /* ViewModel */,
 			);
-			path = resource;
+			path = MVVM;
 			sourceTree = "<group>";
 		};
-		CE99AA6B281BD70A00D53412 /* Model */ = {
+		CE7D4C8029FE3B84006FD0D0 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				CE99AA6C281BD71A00D53412 /* Goal.swift */,
-				CE9603E9281FD0E8004E22EE /* SubGoal.swift */,
-				CEA1663F28220A520022954C /* DBHelper.swift */,
+				CE02634C29FEA58F00CF1AAA /* Resource */,
+				CE02634929FE8C9E00CF1AAA /* Extension */,
+				CE7D4C8329FE3B9C006FD0D0 /* Main */,
+				CE7D4C8229FE3B92006FD0D0 /* Literal */,
+				CE7D4C8129FE3B8C006FD0D0 /* Service */,
 			);
-			path = Model;
+			path = Global;
 			sourceTree = "<group>";
 		};
-		CE99AA70281BE53C00D53412 /* GoalView */ = {
+		CE7D4C8129FE3B8C006FD0D0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CE638660281A288800B5188F /* GoalView.swift */,
-				CE99AA6E281BDD5A00D53412 /* EmptyGoalView.swift */,
-				CE99AA74281BE59200D53412 /* SubGoalItem.swift */,
+				CE7D4C8B29FE3D52006FD0D0 /* CoreDataManager.swift */,
+				CE7D4C5A29FE3B4A006FD0D0 /* SteppingStone.xcdatamodeld */,
+				CE02634D29FEA5F600CF1AAA /* GoalManager.swift */,
+				CE02634F29FEA63100CF1AAA /* SubGoalManager.swift */,
 			);
-			path = GoalView;
+			path = Service;
 			sourceTree = "<group>";
 		};
-		CE99AA71281BE55100D53412 /* SetView */ = {
+		CE7D4C8229FE3B92006FD0D0 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				CEB9DD7E2820F106006FBB20 /* EditGoalView.swift */,
-				CE638662281A289400B5188F /* SetGoalView.swift */,
-				CE0A6538281CDE55008179DE /* SetSubGoalItem.swift */,
+				CE7D4C8729FE3C66006FD0D0 /* K.swift */,
+				CE7D4C8929FE3C8C006FD0D0 /* Colors.swift */,
 			);
-			path = SetView;
+			path = Literal;
 			sourceTree = "<group>";
 		};
-		CE99AA76281BE5D400D53412 /* ViewModel */ = {
+		CE7D4C8329FE3B9C006FD0D0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CE99AA77281BE5FD00D53412 /* CircularProgress.swift */,
+				CE7D4C5D29FE3B4A006FD0D0 /* Info.plist */,
+				CE7D4C4F29FE3B48006FD0D0 /* SteppingStoneApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE7D4C8429FE3C4B006FD0D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D4C9829FE42FD006FD0D0 /* GoalViewModel.swift */,
+				CE7D4C9A29FE4305006FD0D0 /* SubGoalViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CEB4121E281BECAB005C6558 /* BasicView */ = {
+		CE7D4C8529FE3C50006FD0D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE638668281A2BBA00B5188F /* MainView.swift */,
-				CE63864E281A257200B5188F /* ContentView.swift */,
+				CE7D4C8F29FE3E74006FD0D0 /* Home */,
 			);
-			path = BasicView;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE7D4C8629FE3C52006FD0D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D4C9C29FE4322006FD0D0 /* Goal.swift */,
+				CE7D4C9E29FE4435006FD0D0 /* SubGoal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE7D4C8F29FE3E74006FD0D0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D4C8D29FE3DE1006FD0D0 /* HomeView.swift */,
+				CE7D4C9129FE3EA1006FD0D0 /* GoalView.swift */,
+				CE7D4C9329FE3EAA006FD0D0 /* SubGoalView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE638648281A257200B5188F /* SteppingStone */ = {
+		CE7D4C4B29FE3B48006FD0D0 /* SteppingStone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE63865C281A257200B5188F /* Build configuration list for PBXNativeTarget "SteppingStone" */;
+			buildConfigurationList = CE7D4C7629FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStone" */;
 			buildPhases = (
-				CE638645281A257200B5188F /* Sources */,
-				CE638646281A257200B5188F /* Frameworks */,
-				CE638647281A257200B5188F /* Resources */,
+				CE7D4C4829FE3B48006FD0D0 /* Sources */,
+				CE7D4C4929FE3B48006FD0D0 /* Frameworks */,
+				CE7D4C4A29FE3B48006FD0D0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,87 +273,177 @@
 			);
 			name = SteppingStone;
 			productName = SteppingStone;
-			productReference = CE638649281A257200B5188F /* SteppingStone.app */;
+			productReference = CE7D4C4C29FE3B48006FD0D0 /* SteppingStone.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE7D4C6129FE3B4A006FD0D0 /* SteppingStoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7D4C7929FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStoneTests" */;
+			buildPhases = (
+				CE7D4C5E29FE3B4A006FD0D0 /* Sources */,
+				CE7D4C5F29FE3B4A006FD0D0 /* Frameworks */,
+				CE7D4C6029FE3B4A006FD0D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7D4C6429FE3B4A006FD0D0 /* PBXTargetDependency */,
+			);
+			name = SteppingStoneTests;
+			productName = SteppingStoneTests;
+			productReference = CE7D4C6229FE3B4A006FD0D0 /* SteppingStoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE7D4C6B29FE3B4A006FD0D0 /* SteppingStoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7D4C7C29FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStoneUITests" */;
+			buildPhases = (
+				CE7D4C6829FE3B4A006FD0D0 /* Sources */,
+				CE7D4C6929FE3B4A006FD0D0 /* Frameworks */,
+				CE7D4C6A29FE3B4A006FD0D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7D4C6E29FE3B4A006FD0D0 /* PBXTargetDependency */,
+			);
+			name = SteppingStoneUITests;
+			productName = SteppingStoneUITests;
+			productReference = CE7D4C6C29FE3B4A006FD0D0 /* SteppingStoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE638641281A257200B5188F /* Project object */ = {
+		CE7D4C4429FE3B48006FD0D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					CE638648281A257200B5188F = {
-						CreatedOnToolsVersion = 13.3.1;
+					CE7D4C4B29FE3B48006FD0D0 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					CE7D4C6129FE3B4A006FD0D0 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CE7D4C4B29FE3B48006FD0D0;
+					};
+					CE7D4C6B29FE3B4A006FD0D0 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CE7D4C4B29FE3B48006FD0D0;
 					};
 				};
 			};
-			buildConfigurationList = CE638644281A257200B5188F /* Build configuration list for PBXProject "SteppingStone" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = CE7D4C4729FE3B48006FD0D0 /* Build configuration list for PBXProject "SteppingStone" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CE638640281A257200B5188F;
-			productRefGroup = CE63864A281A257200B5188F /* Products */;
+			mainGroup = CE7D4C4329FE3B48006FD0D0;
+			productRefGroup = CE7D4C4D29FE3B48006FD0D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE638648281A257200B5188F /* SteppingStone */,
+				CE7D4C4B29FE3B48006FD0D0 /* SteppingStone */,
+				CE7D4C6129FE3B4A006FD0D0 /* SteppingStoneTests */,
+				CE7D4C6B29FE3B4A006FD0D0 /* SteppingStoneUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE638647281A257200B5188F /* Resources */ = {
+		CE7D4C4A29FE3B48006FD0D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE638654281A257200B5188F /* Preview Assets.xcassets in Resources */,
-				CE638651281A257200B5188F /* Assets.xcassets in Resources */,
+				CE7D4C5729FE3B4A006FD0D0 /* Preview Assets.xcassets in Resources */,
+				CE7D4C5429FE3B4A006FD0D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C6029FE3B4A006FD0D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C6A29FE3B4A006FD0D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE638645281A257200B5188F /* Sources */ = {
+		CE7D4C4829FE3B48006FD0D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE99AA6D281BD71A00D53412 /* Goal.swift in Sources */,
-				CE9603EA281FD0E8004E22EE /* SubGoal.swift in Sources */,
-				CE99AA6F281BDD5A00D53412 /* EmptyGoalView.swift in Sources */,
-				CE638656281A257200B5188F /* Persistence.swift in Sources */,
-				CE638669281A2BBA00B5188F /* MainView.swift in Sources */,
-				CE99AA75281BE59200D53412 /* SubGoalItem.swift in Sources */,
-				CE638659281A257200B5188F /* SteppingStone.xcdatamodeld in Sources */,
-				CEA1664028220A520022954C /* DBHelper.swift in Sources */,
-				CEB9DD7F2820F106006FBB20 /* EditGoalView.swift in Sources */,
-				CE638661281A288800B5188F /* GoalView.swift in Sources */,
-				CE0A6539281CDE55008179DE /* SetSubGoalItem.swift in Sources */,
-				CE63864F281A257200B5188F /* ContentView.swift in Sources */,
-				CE638663281A289400B5188F /* SetGoalView.swift in Sources */,
-				CE63864D281A257200B5188F /* SteppingStoneApp.swift in Sources */,
-				CE99AA78281BE5FD00D53412 /* CircularProgress.swift in Sources */,
+				CE02634B29FE8CA900CF1AAA /* String+Extension.swift in Sources */,
+				CE7D4C8E29FE3DE1006FD0D0 /* HomeView.swift in Sources */,
+				CE7D4C8A29FE3C8C006FD0D0 /* Colors.swift in Sources */,
+				CE7D4C8829FE3C66006FD0D0 /* K.swift in Sources */,
+				CE7D4C9929FE42FD006FD0D0 /* GoalViewModel.swift in Sources */,
+				CE7D4C9429FE3EAA006FD0D0 /* SubGoalView.swift in Sources */,
+				CE7D4C5C29FE3B4A006FD0D0 /* SteppingStone.xcdatamodeld in Sources */,
+				CE7D4C9B29FE4305006FD0D0 /* SubGoalViewModel.swift in Sources */,
+				CE7D4C9D29FE4322006FD0D0 /* Goal.swift in Sources */,
+				CE02634E29FEA5F600CF1AAA /* GoalManager.swift in Sources */,
+				CE02635029FEA63100CF1AAA /* SubGoalManager.swift in Sources */,
+				CE7D4C8C29FE3D52006FD0D0 /* CoreDataManager.swift in Sources */,
+				CE7D4C9F29FE4435006FD0D0 /* SubGoal.swift in Sources */,
+				CE7D4C9229FE3EA1006FD0D0 /* GoalView.swift in Sources */,
+				CE7D4C5029FE3B48006FD0D0 /* SteppingStoneApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C5E29FE3B4A006FD0D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7D4C6729FE3B4A006FD0D0 /* SteppingStoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7D4C6829FE3B4A006FD0D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7D4C7329FE3B4A006FD0D0 /* SteppingStoneUITestsLaunchTests.swift in Sources */,
+				CE7D4C7129FE3B4A006FD0D0 /* SteppingStoneUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CE7D4C6429FE3B4A006FD0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7D4C4B29FE3B48006FD0D0 /* SteppingStone */;
+			targetProxy = CE7D4C6329FE3B4A006FD0D0 /* PBXContainerItemProxy */;
+		};
+		CE7D4C6E29FE3B4A006FD0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7D4C4B29FE3B48006FD0D0 /* SteppingStone */;
+			targetProxy = CE7D4C6D29FE3B4A006FD0D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		CE63865A281A257200B5188F /* Debug */ = {
+		CE7D4C7429FE3B4A006FD0D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -311,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,13 +497,13 @@
 			};
 			name = Debug;
 		};
-		CE63865B281A257200B5188F /* Release */ = {
+		CE7D4C7529FE3B4A006FD0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -365,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -375,7 +551,7 @@
 			};
 			name = Release;
 		};
-		CE63865D281A257200B5188F /* Debug */ = {
+		CE7D4C7729FE3B4A006FD0D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -404,7 +580,7 @@
 			};
 			name = Debug;
 		};
-		CE63865E281A257200B5188F /* Release */ = {
+		CE7D4C7829FE3B4A006FD0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -433,23 +609,117 @@
 			};
 			name = Release;
 		};
+		CE7D4C7A29FE3B4A006FD0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 744MUUC77P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anjian.SteppingStoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SteppingStone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SteppingStone";
+			};
+			name = Debug;
+		};
+		CE7D4C7B29FE3B4A006FD0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 744MUUC77P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anjian.SteppingStoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SteppingStone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SteppingStone";
+			};
+			name = Release;
+		};
+		CE7D4C7D29FE3B4A006FD0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 744MUUC77P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anjian.SteppingStoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SteppingStone;
+			};
+			name = Debug;
+		};
+		CE7D4C7E29FE3B4A006FD0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 744MUUC77P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anjian.SteppingStoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SteppingStone;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE638644281A257200B5188F /* Build configuration list for PBXProject "SteppingStone" */ = {
+		CE7D4C4729FE3B48006FD0D0 /* Build configuration list for PBXProject "SteppingStone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE63865A281A257200B5188F /* Debug */,
-				CE63865B281A257200B5188F /* Release */,
+				CE7D4C7429FE3B4A006FD0D0 /* Debug */,
+				CE7D4C7529FE3B4A006FD0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE63865C281A257200B5188F /* Build configuration list for PBXNativeTarget "SteppingStone" */ = {
+		CE7D4C7629FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE63865D281A257200B5188F /* Debug */,
-				CE63865E281A257200B5188F /* Release */,
+				CE7D4C7729FE3B4A006FD0D0 /* Debug */,
+				CE7D4C7829FE3B4A006FD0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7D4C7929FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7D4C7A29FE3B4A006FD0D0 /* Debug */,
+				CE7D4C7B29FE3B4A006FD0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7D4C7C29FE3B4A006FD0D0 /* Build configuration list for PBXNativeTarget "SteppingStoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7D4C7D29FE3B4A006FD0D0 /* Debug */,
+				CE7D4C7E29FE3B4A006FD0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -457,17 +727,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE638657281A257200B5188F /* SteppingStone.xcdatamodeld */ = {
+		CE7D4C5A29FE3B4A006FD0D0 /* SteppingStone.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE638658281A257200B5188F /* SteppingStone.xcdatamodel */,
+				CE7D4C5B29FE3B4A006FD0D0 /* SteppingStone.xcdatamodel */,
 			);
-			currentVersion = CE638658281A257200B5188F /* SteppingStone.xcdatamodel */;
+			currentVersion = CE7D4C5B29FE3B4A006FD0D0 /* SteppingStone.xcdatamodel */;
 			path = SteppingStone.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CE638641281A257200B5188F /* Project object */;
+	rootObject = CE7D4C4429FE3B48006FD0D0 /* Project object */;
 }
